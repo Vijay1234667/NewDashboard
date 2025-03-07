@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/dataTables.bootstrap5.css">
+    <link rel="stylesheet" type="text/css" href="./css/daterangepicker.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar report-navbar navbar-expand-md fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="javascript:void(0)"><img class="img-fluid logo"
+                        src="./image/dashboardlogowhite.png" alt="dashboardlogowhite"></a>
+                <button class="navbar-toggler shadow-none border-0 " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars text-white"></i><span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav navbar-nav-mid-bg-dark mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="overview.html"><span
+                                    class="me-2"><img src="./image/Overviewvector.png" alt="Overviewvector"
+                                        width="24px"></span>Overview</a>
+                        </li>
+                        <span class="text-white mt-2 ms-2 d-none d-md-block">|</span>
+                        <li class="nav-item ms-0 ms-md-3">
+                            <a class="nav-link text-white" aria-current="page" href="report.html"><span><img
+                                        class="me-2" src="./image/reportvector.png" alt="reportvector"
+                                        width="24px"></span>Report</a>
+                        </li>
+                    </ul>
+                    <div class="dropdown">
+                        <button class="btn w-75 shadow-none dropdown-toggle font-12" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="text-white font-15"> <span><img class="img-fluid me-1"
+                                        src="./image/user-profile-svg.svg" alt=""></span>Kunal Kothari</span>
+                        </button>
+                        <ul class="dropdown-menu w-75  text-white mt-3">
+                            <li><a class="dropdown-item  font-14 fw-500 text-danger" href="javascript:void(0)"><img
+                                        class="img-fluid me-2 " src="./image/log-out-svg.svg" alt="log-out-svg"
+                                        width="22px">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="main-wrapper-section">
+            <section class="dasboard-top-campaigns-details">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center mb-4">
+                        <div class="col-lg-5 col-md-8 col-12">
+                            <h2 class="fw-700">Hello, Kunal</h2>
+                            <p>Track, Analyze, and Optimize Your Campaigns Seamlessly.</p>
+                        </div>
+
+
+                        <div class="col-md-5 col-lg-3 col-12 mb-3">
+                            <div class="datepicker" id="customSelect1">
+                                <span class="d-block text-nowrap mb-2 font-14">Date:</span>
+                                <div class="datepicker-wrap" id="reportrange">
+                                    <span></span>
+                                    <i class="fas fa-chevron-down me-2 font-10"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" col-xl-2 col-lg-2 col-md-4 col-6 mb-3">
+                            <select name="offers" id="offers">
+                                <option value="">Select</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2 col-6 mb-3">
+                            <a href="" class="btn">submit</a>
+                        </div>
+                    </div>
+
+                    <div class="row campaigns-top-details-card-wrapper mb-4">
+                        <div class="col-lg-3 col-md-6 mb-3">
+                            <div class="card position-relative">
+                                <div>
+                                    <h6 class="mb-1">Impression</h6>
+                                    <h4>₹120,000</h4>
+                                </div>
+                                <div class="position-absolute top-30 end-0">
+                                    <img src="./image/Impressionsvg.png" alt="" width="10px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-3">
+                            <div class="card position-relative">
+                                <div>
+                                    <h6 class="mb-1">Clicks</h6>
+                                    <h4>₹120,000</h4>
+                                </div>
+                                <div class="position-absolute top-30 end-0">
+                                    <img src="./image/Clicks-svg.svg" alt="" width="10px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-3">
+                            <div class="card position-relative">
+                                <div>
+                                    <h6 class="mb-1">ECPA</h6>
+                                    <h4>₹120,000</h4>
+                                </div>
+                                <div class="position-absolute top-30 end-0">
+                                    <img src="./image/ECPA-svg.svg" alt="" width="10px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-3">
+                            <div class="card position-relative">
+                                <div>
+                                    <h6 class="mb-1">ECPM</h6>
+                                    <h4>₹120,000</h4>
+                                </div>
+                                <div class="position-absolute top-30 end-0">
+                                    <img src="./image/ECPM-svg.svg" alt="" width="10px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-3">
+                            <div class="card position-relative">
+                                <div>
+                                    <h6 class="mb-1">Installs</h6>
+                                    <h4>₹120,000</h4>
+                                </div>
+                                <div class="position-absolute top-30 end-0">
+                                    <img src="./image/install-svg.svg" alt="" width="10px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-3">
+                            <div class="card position-relative">
+                                <div>
+                                    <h6 class="mb-1">ECPI</h6>
+                                    <h4>₹120,000</h4>
+                                </div>
+                                <div class="position-absolute top-30 end-0">
+                                    <img src="./image/ECPI-svg.svg" alt="" width="10px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-3">
+                            <div class="card position-relative">
+                                <div>
+                                    <h6 class="mb-1">ECPC</h6>
+                                    <h4>₹120,000</h4>
+                                </div>
+                                <div class="position-absolute top-30 end-0">
+                                    <img src="./image/ECPC-svg.svg" alt="" width="10px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-3">
+                            <div class="card position-relative">
+                                <div>
+                                    <h6 class="mb-1">ECPI</h6>
+                                    <h4>₹120,000</h4>
+                                </div>
+                                <div class="position-absolute top-30 end-0">
+                                    <img src="./image/ECPI-svg.svg" alt="" width="10px">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row report-statistics-datatable-charts">
+                        <div class="p-3">
+                            <div class="mb-4">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <h4 class="font-16">Statistics</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 statistic-btn-container mb-3 text-end">
+                                        <a href="javascript:void(0)" class="btn shadow-none">Copy</a>
+                                        <a href="javascript:void(0)" class="btn shadow-none">CSV</a>
+                                        <a href="javascript:void(0)" class="btn shadow-none">PDF</a>
+                                        <a href="javascript:void(0)" class="btn shadow-none">Print</a>
+                                    </div>
+                                </div>
+                                <div class="campaign position-relative mb-4">
+                                    <div class="campaign-header table-head">
+                                    </div>
+                                    <div class="card radius-top0 shadow-none">
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table class="table stripe table-hover text-nowrap" width="100%"
+                                                    id="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Campaign Domain</th>
+                                                            <th>Total Sessions</th>
+                                                            <th>Mobile Sessions</th>
+                                                            <th>Desktop Sessions</th>
+                                                            <th>Desktop Sessions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="border-0">
+                                                        <tr>
+                                                            <td>adhd-treatment-in-mexico.zone</td>
+                                                            <td>100435</td>
+                                                            <td>100400</td>
+                                                            <td>35</td>
+                                                            <td>35</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                            <td>Text</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="./js/jquery-3.7.1.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="./js/dataTables.js"></script>
+    <script type="text/javascript" src="./js/dataTables.bootstrap5.js"></script>
+    <script src="./js/moment.min.js"></script>
+    <script type="text/javascript" src="./js/daterangepicker.min.js"></script>
+
+    <script>
+
+        $("#table").dataTable({
+            scrollX: true,
+            language: {
+                'paginate': {
+                    'previous': '<i class="fa-solid fa-angle-left me-2 font-12"></i>Back',
+                    'next': 'Next<i class="fa-solid fa-angle-right ms-2 font-12"></i>',
+                    'first': '<i class="fa-solid fa-angles-left me-2 font-12"></i>First',
+                    'last': 'Last<i class="fa-solid fa-angles-right ms-2 font-12"></i>'
+                }
+            },
+            "aoColumnDefs": [
+                { "bSortable": false, "aTargets": [1, 2, 3, 4] },
+            ],
+            // "pageLength": 5,
+            // "sDom": 'Rfrtlip',
+        });
+    </script>
+
+
+
+    <script>
+        $(function () {
+            var start = moment().subtract(29, 'days');
+            var end = moment();
+
+            function cb(start, end) {
+                $('#reportrange span').html(start.format('YYYY/MM/D') + ' - ' + end.format('YYYY/MM/D'));
+            }
+
+            $('#reportrange').daterangepicker({
+                startDate: start,
+                endDate: end,
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                }
+            }, cb);
+
+            cb(start, end);
+
+        });
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
